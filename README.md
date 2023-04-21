@@ -96,3 +96,15 @@ Like `npm start`, but also attempts to open your app on a connected Android devi
 Demo 
 
 https://streamable.com/3pim56
+
+
+
+Home
+![Simulator Screen Shot - iPhone 14 - 2023-04-21 at 15 02 29](https://user-images.githubusercontent.com/20715889/233725412-d51a8daa-8c26-4d9c-a05b-5cbed65ff709.png)
+
+Filter
+![Simulator Screen Shot - iPhone 14 - 2023-04-21 at 15 02 33](https://user-images.githubusercontent.com/20715889/233725428-6a2bb388-49b7-472c-af33-832108726fbf.png)
+
+Detail
+![Simulator Screen Shot - iPhone 14 - 2023-04-21 at 15 02 36](https://user-images.githubusercontent.com/20715889/233725439-f333de0b-1b90-4e01-9e34-db03274c8af9.png)
+
