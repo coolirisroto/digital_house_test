@@ -1,36 +1,94 @@
-# TypeScript Example
+# Front end test documentation
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+## Folder Structure
 
-```sh
-npx create-react-native-app -t with-typescript
+```
+.
+├── src
+│   ├── assets
+│   │   ├── img
+│   │   ├── fonts
+│   │   │
+│   ├── clients
+│   │   ├── mockAPI
+│   │   │
+│   ├── components
+│   │   ├── Button
+│   │   ├── MoneyCard
+│   │   ├── Product
+│   │   │
+│   ├── screens
+│   │   ├── Home
+│   │   ├── Detail
+│   │   │
+│   ├── styles
+│   │   ├── colors
+│   │   ├── family
+│   │   │
+│   ├── utils
+│   │   ├── http
+│   │   ├── date
+│
 ```
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+#### All http requests should be made through the Http util.
 
-## 🚀 How to use
+## Unit Testing.
 
-#### Creating a new project
+- Unit tests with [Jest](https://github.com/facebook/jest) and [react-native-testing-library](https://github.com/callstack/react-native-testing-library).
+- Create Unit Testing for any implementation under the `__tests__` folder, for example `components/Button.test.tsx`.
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+## Typescript.
 
-### Adding TypeScript to existing projects
+- Prefer Ambient declarations style.
+- In components use type for state and props definitions.
+- For global shared definitions use interfaces in the typing definition.
+- For global shared enums use interfaces in the enums definition
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `yarn start` or `npm run start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+## libraries
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+|                Library                | Usage | Coverage | License |
+| :-----------------------------------: | :---: | :------: | :-----: |
+|         axios                         |       |          |         |
+|      classnames                       |       |          |         |
+|        React Navigation               |       |          |         |
 
-## 📝 Notes
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+## UI components
+
+|     Component     | Description |
+| :---------------: | :---------: |
+|     Button        |             |
+|     MoneyCard     |             |
+|     Product       |             |
+
+
+## Available Scripts
+
+If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
+
+### `npm start`
+
+Runs your app in development mode.
+
+Open it in the [Expo app](https://expo.io) on your phone to view it. It will reload if you save edits to your files, and you will see build errors and logs in the terminal.
+
+Sometimes you may need to reset or clear the React Native packager's cache. To do so, you can pass the `--reset-cache` flag to the start script:
+
+```
+npm start --reset-cache
+# or
+yarn start --reset-cache
+```
+
+#### `npm test`
+
+Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
+
+#### `npm run ios`
+
+Like `npm start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
+
+#### `npm run android`
+
+Like `npm start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
